@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 3</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+<nav class="nav-bar">
+  <ul class="nav-list">
+    <li>Home</li>
+    <li>Services</li>
+    <li>Contact</li>
+  </ul>
+  <div class="sticky-wrapper">
+    <a href="#" class="account-button">Account</a>
+  </div>
+</nav>
+
+
+    <nav>
+      
+      <!--to sections of the same page-->
+      <ul class="navigation-list">
+        <li class="navigation-list-item" id="homepage"><a href="#homepage">homepage</a></li>
+        <li class="navigation-list-item" id="services"><a href="#services">services</a></li>
+        <li class="navigation-list-item" id="contact"><a href="#contact">contact</a></li>
+        <li class="navigation-list-item sticky-item" id="account"><a href="#account">Account</a></li>
+      </ul>
+      
+    </nav>
+
+    <div class="search-wrapper">
+  <input type="text" placeholder="   Search"/>
+  <button type="submit">🔍</button>
+</div>
+
+    
+     <div id="testdiv">test</div>
+     <div class="grid-container">
+  <div class="item1">Item 1</div>
+  <div class="item2">Item 2</div>
+  <div class="item3">Item 3</div>
+  <div class="item4">Item 4</div>
+</div>
+
+    <nav>
+      <!--to the call section of the contact page-->
+      <a href="/contact#call">call now</a>
+    </nav>
+
+    <section id="homepage">
+      <h1 style="color: blueviolet">This is The home page</h1>
+      <p>welcome to the homepage</p>
+    </section>
+
+    <section id="services">
+      <a href="/services">Services Button</a>
+      <p>nothing to see here</p>
+    </section>
+
+    <section id="contact">
+      <a href="/contact">Contact Button</a>
+      <p>nothing to see here</p>
+    </section>
+
+    <fieldset>
+      <legend>Sign up</legend>
+      <h2>Complete and submit this form</h2>
+      <form id="signupForm" action="/submit" method="POST">
+        <ul>
+          <li><label for="firstName">First Name:</label></li>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="Jon"
+            required
+          />
+          <li><label for="lastName">Last name:</label></li>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Doe"
+            required
+          />
+          <li><label for="contactNumber">Contact number:</label></li>
+          <input
+            type="tel"
+            id="contactNumber"
+            name="contactNumber"
+            placeholder="+1 (234) 567-8910"
+            required
+          />
+          (for confirmation code)
+          <li><label for="emailAddress">Email address</label></li>
+          <input
+            type="email"
+            id="emailAddress"
+            name="emailAddress"
+            placeholder="user@email.com"
+            required
+          />
+          (for confirmation code)<br />
+          <label for="country">Country:</label>
+          <select>
+            <option value="Country">Country</option>
+            <option value="Country2">Country2</option>
+          </select>
+          <br />
+          <label for="age">Age:</label>
+          <input
+            type="number"
+            id="age"
+            name="userAge"
+            min="21"
+            max="127"
+            placeholder="Age"
+            value="21"
+            required
+          /><br />
+
+          <label for="freeMem">Free membership</label>
+          <input
+            id="freeMem"
+            type="radio"
+            name="question"
+            value="freeMem"
+            checked="true"
+            required
+          />
+          <br /><label for="paidMem">Paid membership</label>
+          <input type="radio" id="paidMem" name="question" required />
+          <br />
+          <p>Why do you want an account with us?</p>
+
+          <input type="checkbox" id="intendedPurpose" name="intendedPurpose" />
+          <label for="intendedPurpose">Buying</label>
+          <br />
+          <input type="checkbox" id="intendedPurpose" name="intendedPurpose" />
+          <label for="intendedPurpose">Selling</label>
+          <br />
+          <input type="checkbox" id="intendedPurpose" name="intendedPurpose" />
+          <label for="intendedPurpose">Browsing</label>
+          <br /><br />
+          <label for="comment">Is there anything that you want to add?</label>
+          <br /><textarea
+            name="comment"
+            id="comment"
+            rows="4"
+            columns="40"
+            style="width: 250px; height: 60px"
+            placeholder="I like the look of this website!"
+            required
+          ></textarea>
+          <br /><label for="inviteCode">Invite code:</label>
+          <input
+            type="text"
+            name="inviteCode"
+            id="inviteCode"
+            placeholder="not yet available"
+            disabled
+          />
+          <br /><br />
+          <input type="reset" />
+          <input
+            type="submit"
+            value="SUBMIT"
+            required
+          /><!--even submission is required lol-->
+          <br /><br /><br />
+        </ul>
+      </form>
+    </fieldset>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Center Website | Home Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div class="gridContainer">
+      <header>
+        <nav>
+          <ul class="navList">
+            <li><a href="Homepage.html">Home</a></li>
+            <li><a href="Eventspage.html">Events</a></li>
+            <li><a href="Menupage.html">Menu</a></li>
+            <li><a href="Locationpage.html">Location</a></li>
+            <li><a href="Contactuspage.html">Contact</a></li>
+          </ul>
+        </nav>
+        <h1>Contact <span> Temple Stadium</span> for More Information!</h1>
+      </header>
+
+      <p>Contact us at +1 (234) 567-8910</p>
+
+      <fieldset class="contactForm">
+        <legend>Complete and submit this form</legend>
+        <h2>Contact</h2>
+        <form id="signupForm" action="/submit" method="POST">
+          <ul>
+            <li><label for="firstName">First Name:</label></li>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              placeholder="Jon"
+              required
+            />
+            <li><label for="lastName">Last name:</label></li>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              placeholder="Doe"
+              required
+            />
+            <li><label for="contactNumber">Contact number:</label></li>
+            <input
+              type="tel"
+              id="contactNumber"
+              name="contactNumber"
+              placeholder="+1 (234) 567-8910"
+              required
+            />
+            (for correspondence)
+            <li><label for="emailAddress">Email address</label></li>
+            <input
+              type="email"
+              id="emailAddress"
+              name="emailAddress"
+              placeholder="user@email.com"
+              required
+            />
+            (for correspondence)<br />
+            <label for="country">Country:</label>
+            <select>
+              <option value="Country">Country</option>
+              <option value="Country2">Country2</option>
+            </select>
+            <br />
+            <label for="age">Age:</label>
+            <input
+              type="number"
+              id="age"
+              name="userAge"
+              min="21"
+              max="127"
+              placeholder="Age"
+              value="21"
+              required
+            /><br />
+
+            <label for="comment">Please express your inquiry below:</label>
+            <br /><textarea
+              name="comment"
+              id="comment"
+              rows="4"
+              columns="40"
+              style="width: 250px; height: 60px"
+              placeholder="Where can I find the information for valet parking?"
+              required
+            ></textarea>
+            <br />
+            <br /><br />
+            <input type="reset" />
+            <input type="submit" value="SUBMIT" required />
+          </ul>
+        </form>
+      </fieldset>
+    </div>
+    <footer style="text-align: center">
+      Temple City 2025 All rights reserved
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+
+/*
+:root{
+}
+*/
+
+html {
+  background-image: url("https://t4.ftcdn.net/jpg/02/84/32/21/360_F_284322178_4gxGLWFFujUQpE7p31xMLDt916vayMgs.jpg");
+  width: 100%;
+}
+
+body {
+  margin: 2em;
+  padding: 1em;
+  border-radius: 2em;
+  background-color: rgba(157, 209, 255, 0.5);
+}
+
+.gridcontainer {
+  display: grid;
+}
+
+.navList {
+  grid-area: navList;
+  display: grid;
+  list-style: none;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding-left: 0;
+}
+
+.navList > li {
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  padding: 7%;
+  border-radius: 1em;
+  background-color: lightcoral;
+  border: solid 1px tomato;
+}
+
+.navList > li a {
+  text-decoration: none;
+}
+
+.navList > li:last-child {
+  color: rgb(255, 255, 255);
+  border-radius: 1em;
+  background-color: rgb(0, 196, 33);
+  border: solid 1px rgb(0, 128, 21);
+}
+
+.offeringsList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+  padding-left: 0;
+}
+
+.offeringsList > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 1em;
+  background-color: lightcoral;
+  border: solid 1px tomato;
+}
+.offeringsList > li:last-child {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 1em;
+  background-color: rgb(0, 196, 33);
+  border: solid 1px rgb(0, 128, 21);
+}
+
+.mainContent > p {
+  text-indent: 7em;
+  font-size: 1.2em;
+}
+
+span {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2em;
+  color: brown;
+}
+
+/***********  Events Page  **************/
+
+.eventList {
+  list-style: none;
+  background-color: rgba(157, 209, 255, 0.5);
+  background-blend-mode: multiply;
+}
+
+.eventListItem {
+  padding: 1em;
+}
+
+.eventName {
+  font-weight: bold;
+}
+
+.eventDate {
+  text-decoration: underline;
+}
+
+.eventDesc {
+  font-style: italic;
+}
+
+/***********  Menu Page  **************/
+
+.menuSection {
+  margin: 2em;
+  padding: 1em;
+  border-radius: 2em;
+  background-color: rgba(157, 209, 255, 0.5);
+  background-blend-mode: multiply;
+}
+
+.contactForm {
+  list-style: none;
+  background-color: rgba(157, 209, 255, 0.5);
+  background-blend-mode: multiply;
+}
+
+.gridcontainer > #menupage {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "navList navList navList navList navList"
+    "classics pizzas pizzas"
+    "burgers pizzas pizzas"
+    "burgers beverages desserts";
+}
+
+.menuCategory {
+  grid-area: classics;
+  border: solid 2px white;
+}
+
+.menuList {
+  list-style-type: none;
+  padding: 0.5em;
+  margin: 0.5em;
+  background-color: rgb(240, 248, 255, 0.5);
+}
+
+#classics {
+  grid-area: classics;
+}
+
+#burgers {
+  grid-area: burgers;
+}
+
+#pizzas {
+  grid-area: pizzas;
+}
+
+#beverages {
+  grid-area: beverages;
+}
+
+#desserts {
+  grid-area: desserts;
+}
+
+.map {
+  width: clamp(350px, 50vw, 500px);
+}
+@media (min-width: 768px) {
+}

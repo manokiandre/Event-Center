@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  min-height: 0;
+}
+html {
+  height: 100%;
+  font-size: 20px;
+}
+
+body {
+  background-color: red;
+  height: 100%;
+}
+
+#layoutContainer {
+  display: flex;
+  height: 100%;
+  background-color: white;
+}
+
+#sidebar {
+  /*this is a flex item which is also now a flex container*/
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: rgb(99, 99, 255);
+  flex-basis: 0;
+  flex: 1;
+  align-items: center;
+}
+
+.vectorimage-icon {
+  padding: 20%;
+  max-width: auto;
+}
+
+#main-container {
+  display: flex;
+  flex: 5;
+  background-color: green;
+}
+
+#imgcontainer {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+#samplebox {
+  display: inherit; /*flex*/
+  background-color: grey;
+  align-self: center;
+}
+
+#tablet {
+  display: none;
+}
+
+#mobile {
+  display: inline;
+}
+
+#desktop {
+  display: none;
+}
+
+/********************************************************/
+
+@media (min-width: 768px) {
+  #sidebar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 0, 179);
+    flex: 0.5;
+
+    height: 100vh;
+  }
+
+  #imgcontainer {
+    flex-direction: row;
+    height: 40vh;
+  }
+
+  img {
+    width: 8vw;
+    height: auto;
+    padding: 1vw;
+    display: block;
+  }
+
+  #tablet {
+    display: inline;
+  }
+
+  #mobile {
+    display: none;
+  }
+  #desktop {
+    display: none;
+  }
+}
+
+/********************************************************/
+
+@media (min-width: 1024px) {
+  body,
+  html {
+    max-height: 100%;
+    max-width: 100vw;
+  }
+
+  body {
+    display: flex;
+  }
+
+  #layoutContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100;
+    background-color: white;
+  }
+
+  #imgcontainer {
+    /*misleading classname*/
+    display: flex;
+    flex-direction: row;
+  }
+
+  .vectorimage-icon {
+    max-width: 20%;
+    padding: 0;
+  }
+
+  img {
+    padding: 0;
+  }
+
+  #sidebar {
+    /*now not a sidebar*/
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgb(204, 0, 255);
+    flex: 1;
+  }
+
+  #main-container {
+    flex: 7;
+    background-color: green;
+    justify-content: center;
+  }
+
+  #samplebox {
+    display: flex;
+    background-color: grey;
+    justify-content: center;
+    padding: 20%;
+    align-self: center;
+    font-size: 100%;
+  }
+
+  #tablet {
+    display: none;
+  }
+
+  #mobile {
+    display: none;
+  }
+  #desktop {
+    display: inline;
+  }
+}
